@@ -11,3 +11,90 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/*----------------------------------------------------------------------*/
+/*     VARIABLES GLOBALES    */
+:root{
+  /**COLORES**/
+  --colorADD : rgb(29, 29, 52); /*Azul Dark Dark*/
+  --colorAD : rgb(52, 52, 99); /*Azul Dark*/
+  --colorA : rgb(69, 69, 255); /*Azul*/
+  --colorAL : rgb(113, 113, 255); /*Azul Light*/
+  --colorALL : rgb(189, 189, 255); /*Azul Light Light*/
+  
+  --colorR : rgb(211, 13, 52); /*Rojo*/
+  --colorAm : rgb(255, 183, 48); /*Rojo*/
+  --colorGD : rgb(69, 69, 69); /*Gray Dark*/
+  --colorPN : rgb(181, 255, 211);   /*Pastel Neon*/
+
+
+  /**MEDIDAS**/
+  --anchoPagina : 800px;
+  --altoNavbar : 40px;  
+  --anchoModal : 400px;
+  --altoModal : 300px;
+  
+}
+
+
+
+
+
+/*----------------------------------------------------------------------*/
+/*     NAVBAR    */
+.header {
+  background-color: var(--colorADD);
+  height: var(--altoNavbar);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-marca {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: var(--altoNavbar);
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 13px;
+  margin: 0 10px;
+  line-height: var(--altoNavbar);
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-menu-item:hover {
+  color: lightpink;
+  cursor: pointer;
+}
+
+.oculta-nav-item{
+  /* visibility: hidden; */
+  /* width: 0px; */
+}
+
+
+
+
+
+
+
+
