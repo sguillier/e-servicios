@@ -1,16 +1,16 @@
-// import NavBar from "./components/NavBar";
 
 import React from "react"
+import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 
 
 function App() {
   return (
+    <>
     <NavBar />
-
-    // <div className="App">
-    //   <h1>Hola Mundo</h1>
-    // </div>
+    <h1>Hola Mundo</h1>
+    <ItemListContainer />
+    </>
   );
 }
 

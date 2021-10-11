@@ -1,16 +1,5 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 
 
@@ -18,16 +7,16 @@ code {
 /*     VARIABLES GLOBALES    */
 :root{
   /**COLORES**/
-  --colorADD : rgb(29, 29, 52); /*Azul Dark Dark*/
-  --colorAD : rgb(52, 52, 99); /*Azul Dark*/
-  --colorA : rgb(69, 69, 255); /*Azul*/
-  --colorAL : rgb(113, 113, 255); /*Azul Light*/
-  --colorALL : rgb(189, 189, 255); /*Azul Light Light*/
+  --colorBDD : rgb(29, 29, 52); /*Blue Dark Dark*/
+  --colorBD : rgb(52, 52, 99); /*Blue Dark*/
+  --colorB  : rgb(69, 69, 255); /*Blue*/
+  --colorBL : rgb(113, 113, 255); /*Blue Light*/
+  --colorBLL : rgb(189, 189, 255); /*Blue Light Light*/
   
-  --colorR : rgb(211, 13, 52); /*Rojo*/
-  --colorAm : rgb(255, 183, 48); /*Rojo*/
-  --colorGD : rgb(69, 69, 69); /*Gray Dark*/
-  --colorPN : rgb(181, 255, 211);   /*Pastel Neon*/
+  --colorR : rgb(211, 13, 52);  /*Red*/
+  --colorY : rgb(255, 183, 48); /*Yellow*/
+  --colorGD : rgb(69, 69, 69);  /*Gray Dark*/
+  --colorN : rgb(181, 255, 211); /*Neon*/
 
 
   /**MEDIDAS**/
@@ -42,10 +31,46 @@ code {
 
 
 
+
+
+
+
+
+/*----------------------------------------------------------------------*/
+/*     DEFINICION GENERALES    */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: sans-serif;
+  padding-top: var(--altoNavbar);
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: var(--anchoPagina);
+  margin: 0 auto;
+  text-align:center;
+  color:var(--colorGD)
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------------------------------------*/
 /*     NAVBAR    */
 .header {
-  background-color: var(--colorADD);
+  background-color: var(--colorBDD);
   height: var(--altoNavbar);
   position: fixed;
   width: 100%;
@@ -91,6 +116,17 @@ code {
   /* width: 0px; */
 }
 
+.cart{
+  display: block;
+  margin-top: 5px;
+  height: 30px;
+  fill:white;
+}
+
+.cart:hover {
+  fill: lightpink;
+  cursor: pointer;
+}
 
 
 
@@ -98,3 +134,11 @@ code {
 
 
 
+/*----------------------------------------------------------------------*/
+/*     Titulo    */
+
+h1{
+  margin: 20px auto;
+  font-size: 40px;
+  font-weight: 900;
+}
