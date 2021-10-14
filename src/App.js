@@ -9,9 +9,9 @@ function App() {
   return (
     <>
     <NavBar />
-    <h1>Hola Mundo</h1>
+    <h1>Hola Facu</h1>
     <ItemListContainer />
-    <ItemCount />
+    <ItemCount name="Horas" stock={5} initial={1} />
     </>
   );
 }
