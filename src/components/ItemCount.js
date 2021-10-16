@@ -1,16 +1,22 @@
 import React, {useState} from 'react'
 
 
-const ItemCount = props => {
+const ItemCount = ({product}) => {
 
-    const [count, setCount] = useState(props.initial)
+    const [count, setCount] = useState(1)
 
 
     return (
-        <div className="item">
+        <div className="item-card">
 
             <div>
-                {props.name}
+                <p className="item-service">
+                    {product.service}
+                </p>
+                <p className="item-name">
+                    {product.name}
+                </p>
+                    
             </div>
             <div className="item-count">
                 <button 
@@ -20,29 +26,28 @@ const ItemCount = props => {
                 <div>{count}</div>
                 <button 
                     className="item-count-add" 
-                    onClick={()=>{setCount(Math.min(count+1, props.stock))}}
+                    onClick={()=>{setCount(Math.min(count+1, product.stock))}}
                 >+</button>
             </div>
             <button 
                 className="item-button"
                 onClick={()=>{
                     count===0?
-                    alert(`No hay Productos Seleccionado`):
-                    alert(`Comprar ${count} Productos`)
+                    alert(`Debes Seleccionar Una minima Cantidad De Horas`):
+                    alert(`Contratar ${count} Horas de ${product.service} ofrecidas por ${product.name}`)
                 }}
             >
-                Comprar
+                Contratar Horas
             </button>
             <button 
                 className="item-button"
                 onClick={()=>{
                     count===0?
-                    alert(`No hay Productos Seleccionado`):
-                    alert(`Agregar al Carrito ${count} Productos`)
+                    alert(`Debes Seleccionar Una minima Cantidad De Horas`):
+                    alert(`Agregar al Carrito ${count} Horas de ${product.service} ofrecidas por ${product.name}`)
                 }}
             >
-                
-                Agregar al Carrito
+                Agregar al Carrito 
             </button>
 
         </div>

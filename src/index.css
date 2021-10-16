@@ -16,7 +16,8 @@
   --colorBLLL : rgb(212, 212, 255); /*Blue Light Light Light*/
   
   --colorR : rgb(211, 13, 52);  /*Red*/
-  --colorRDD : rgb(123, 0, 0);  /*Red Dark Dark*/
+  --colorRD : rgb(150, 0, 58);  /*Red Dark*/
+  --colorRDD : rgb(80, 0, 40);  /*Red Dark Dark*/
 
   --colorY : rgb(255, 183, 48); /*Yellow*/
   --colorGD : rgb(69, 69, 69);  /*Gray Dark*/
@@ -162,7 +163,7 @@ h1{
 
 /*----------------------------------------------------------------------*/
 /* ITEM */
-.item{
+.item-card{
   /* background-color: var(--colorBLLL); */
   background-color: lightgray;
   border-radius: 5px;
@@ -171,6 +172,14 @@ h1{
   width: 180px;
 }
 
+.item-name{
+  color:gray;
+}
+
+.item-service:hover{
+  color:var(--colorRD);
+  cursor: pointer;
+}
 
 .item-count {
   border: 1px solid gray;

@@ -1,6 +1,6 @@
 
 import React from "react"
-import ItemCount from "./components/ItemCount";
+import ItemList from "./components/ItemList";
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 
@@ -9,9 +9,10 @@ function App() {
   return (
     <>
     <NavBar />
-    <h1>Hola Facu</h1>
-    <ItemListContainer />
-    <ItemCount name="Horas" stock={5} initial={1} />
+    <h1>Hola Mundo</h1>
+    <ItemListContainer>
+      <ItemList/>
+    </ItemListContainer>
     </>
   );
 }
