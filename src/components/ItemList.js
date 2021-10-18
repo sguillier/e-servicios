@@ -18,7 +18,7 @@ const ItemList = (props) => {
 
     return (
         <>
-            <div>
+            <div className="item-list">
                 {products.map((product)=>( 
                     <ItemCount
                         product={product} 
