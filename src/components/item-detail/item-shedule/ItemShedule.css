@@ -1,0 +1,58 @@
+
+
+.shedule-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-gap: 4px;
+    max-width: 550px;
+    /* grid-auto-rows: minmax(100px, auto); */
+    margin: auto;
+}
+
+.shedule-clm{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 4px;
+}
+
+.shedule-clm-name{
+    background-color: gray;
+    color:white;
+    font-weight: bold;
+    height: 22px;
+    border-radius: 4px;
+    display: grid;
+    align-items: center;
+}
+
+.shedule-hr{
+    background-color: gray;
+    color:white;
+    font-size: x-small;
+    height: 14px;
+    border-radius: 4px;
+    display: grid;
+    align-items: center;
+}
+
+.shedule-off{
+    background-color: lightgray;
+    color: lightgray;
+    height: 14px;
+    font-size: x-small;   
+    border-radius: 4px;
+}
+
+.shedule-on{
+    background-color:var(--colorBD);
+    color:var(--colorBD);
+    height: 14px;
+    border-radius: 4px;
+    font-size: x-small;
+    
+}
+
+.shedule-leyend{
+    display:grid;
+        
+}

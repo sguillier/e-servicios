@@ -1,0 +1,62 @@
+
+
+
+/*----------------------------------------------------------------------*/
+/* ITEM COUNT*/
+
+.item-count {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 12px;
+  height: 140px;
+  width: 200px;
+  margin: auto;
+  /* display: flex; */
+  justify-content: center;
+  
+}
+
+.item-count-add {
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    height: 32px;
+    margin: 5px auto;
+    padding: 5px;
+    width: 160px;
+  }
+  
+  .item-count-add-button {
+    background-color:var(--colorBD);
+    border: 0px;
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    font-weight: bold;
+  }
+  
+  .item-count-add-button:hover {
+    background-color:var(--colorBDDD);
+    cursor: pointer;
+  }
+  
+  .item-count-button {
+    background-color:var(--colorBD);
+    border: 0px;
+    border-radius: 8px;
+    color:white;
+    display: inline-block;
+    margin: 5px auto;
+    padding: 4px;
+    height: 26px;
+    width: 160px;
+  }
+  
+  .item-count-button:hover {
+    background-color:var(--colorBDDD);
+    cursor: pointer;
+  }

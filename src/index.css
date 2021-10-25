@@ -26,7 +26,7 @@
 
 
   /**MEDIDAS**/
-  --anchoPagina : 800px;
+  --anchoPagina : 1100px;
   --altoNavbar : 40px;  
   --anchoModal : 400px;
   --altoModal : 300px;
@@ -175,68 +175,5 @@ h1{
 
 
 
-/*----------------------------------------------------------------------*/
-/* ITEM CARD*/
-.item-card{
-  /* background-color: var(--colorBLLL); */
-  background-color: lightgray;
-  border-radius: 5px;
-  margin: 20px 20px;
-  padding: 10px;
-  width: 180px;
-}
 
-.item-name{
-  color:gray;
-}
-
-.item-service:hover{
-  color:var(--colorRD);
-  cursor: pointer;
-}
-
-.item-count {
-  border: 1px solid gray;
-  border-radius: 5px;
-  display: flex;
-  background-color: white;
-  justify-content: space-between;
-  height: 32px;
-  margin: 4px auto;
-  padding: 5px;
-  width: 160px;
-}
-
-.item-count-add {
-  background-color:var(--colorBD);
-  border: 0px;
-  border-radius: 5px;
-  color: white;
-  display: inline-block;
-  height: 20px;
-  width: 40px;
-  font-weight: bold;
-}
-
-.item-count-add:hover {
-  background-color:var(--colorBDDD);
-  cursor: pointer;
-}
-
-.item-button {
-  background-color:var(--colorBD);
-  border: 0px;
-  border-radius: 5px;
-  color:white;
-  display: inline-block;
-  margin: 2px auto;
-  padding: 5px;
-  /* height: 18px; */
-  width: 160px;
-}
-
-.item-button:hover {
-  background-color:var(--colorBDDD);
-  cursor: pointer;
-}
 

@@ -1,3 +1,4 @@
+import { getByDisplayValue } from "@testing-library/dom";
 
 const prod = [
     {
@@ -10,8 +11,20 @@ const prod = [
     {
         id: 2,
         service: 'Asesoria Legal',
-        description: 'Abogado con experiencia en Divorcio, Susesiones y Litigios',
         name: 'Bill Clinton',
+        price: '$120 USD',
+        urlPhoto: 'https://firebasestorage.googleapis.com/v0/b/e-servicios.appspot.com/o/billy2.svg?alt=media&token=8af36eb1-616f-46d8-8207-9978d7080bd0',
+        description: 'Abogado con experiencia en Susesiones, Divorcio y Litigios, te puedo dar asesoria con temas difíciles en momentos difíciles.',
+        curriculum: 'Soy Licenciado en Ciencias en Servicio Exterior de Universidad de Georgetown (1968) y Abogado (Juris Doctor) de la Universidad de Yale (1973). Me he desempeñado como político y abogado y fui el 42.º presidente de los Estados Unidos de América de 1993 a 2001. Antes de ello fui gobernador de Arkansas y fiscal general de Arkansas.',
+        shedule: {
+            mon:[9,10,11,12,16,17,18],
+            tue:[9,10,11,12,16,17,18],
+            wed:[9,10,11,12,16,17,18],
+            thu:[9,10,11,12,16,17,18],
+            fri:[9,10,11],
+            sat:[],
+            sun:[]
+        },
         stock: 5,
     },
     {
@@ -24,6 +37,7 @@ const prod = [
     {
         id: 4,
         service: 'Asesoria Tributaria',
+        hola:' Puedes en principio contratar una hora para hacer un levantamiento del tema y si estas interesado podemos ',
         description: 'Contador con experiencia',
         name: 'Carlos Slim',
         stock: 5,    

@@ -1,8 +1,11 @@
 
 import React from "react"
-import ItemList from "./components/ItemList";
-import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
+import ItemList from "./components/ItemList";
+import ItemDetail from "./components/item-detail/ItemDetail";
+import ItemListContainer from "./layout/ItemListContainer";
+import ItemDetailContainer from "./layout/ItemDetailContainer";
+
 
 
 function App() {
@@ -10,9 +13,12 @@ function App() {
     <>
     <NavBar />
     <h1>Hola Mundo</h1>
-    <ItemListContainer>
+    {/* <ItemListContainer>
       <ItemList/>
-    </ItemListContainer>
+    </ItemListContainer> */}
+    <ItemDetailContainer>
+      <ItemDetail/>
+    </ItemDetailContainer>
     </>
   );
 }

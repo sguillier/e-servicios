@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import promiseProducts from '../data/promiseProducts.js'
-import ItemCount from "../components/ItemCount";
+import ItemCard from "./item-card/ItemCard";
 
 const ItemList = (props) => {
     const [products, setProducts] = useState([])
@@ -20,7 +20,7 @@ const ItemList = (props) => {
         <>
             <div className="item-list">
                 {products.map((product)=>( 
-                    <ItemCount
+                    <ItemCard
                         product={product} 
                     /> 
                 ))}
