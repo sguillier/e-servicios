@@ -5,7 +5,7 @@ const dataItems = [
         service: 'Clases de Programación',
         name: 'Linus Torvalds',
         price: '$50 USD',
-        urlPhoto: 'https://firebasestorage.googleapis.com/v0/b/e-servicios.appspot.com/o/linus3.svg?alt=media&token=fdd6a83d-006f-40ba-a7e1-230eed1d1bf6',
+        urlPhoto: 'https://firebasestorage.googleapis.com/v0/b/e-servicios.appspot.com/o/linus4.svg?alt=media&token=28417a15-316f-4ea3-b5bc-86fdac5350ba',
         description: 'Te puedo ayudar a reforzar tus conocimientos en C, C++, Java, SQL, JavaScript, Python, entre otros. Descuento por grupos',
         curriculum: 'Soy ingeniero de software, ​conocido por iniciar y mantener el desarrollo del kernel Linux, basándome en el sistema operativo libre Minix creado por Andrew S. Tanenbaum y en algunas herramientas, varias utilidades y los compiladores desarrollados por el proyecto GNU',
         categoryId: 'clp',
