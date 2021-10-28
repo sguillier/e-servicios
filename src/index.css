@@ -34,14 +34,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------*/
 /*     DEFINICION GENERALES    */
 * {
@@ -68,98 +60,9 @@ body {
 
 
 
-
-
-
-
-
-/*----------------------------------------------------------------------*/
-/*     NAVBAR    */
-.header {
-  background-color: var(--colorBDD);
-  height: var(--altoNavbar);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-#nav-marca {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0 40px;
-  line-height: var(--altoNavbar);
-}
-
-.nav-menu {
-  display: flex;
-  margin-right: 40px;
-  list-style: none;
-}
-
-.nav-menu-item {
-  font-size: 13px;
-  margin: 0 10px;
-  line-height: var(--altoNavbar);
-  text-transform: uppercase;
-  color: white;
-}
-
-.nav-menu-item:hover {
-  color: lightpink;
-  cursor: pointer;
-}
-
-.oculta-nav-item{
-  /* visibility: hidden; */
-  /* width: 0px; */
-}
-
-.cart{
-  display: block;
-  margin-top: 5px;
-  height: 30px;
-  fill:white;
-}
-
-.cart:hover {
-  fill: lightpink;
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------*/
-/*     Titulo    */
-
-h1{
-  margin: 20px auto;
-  font-size: 40px;
-  font-weight: 900;
-}
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------*/
 /* ITEM LIST CONTAINER*/
-.item-list{
+.item-list-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

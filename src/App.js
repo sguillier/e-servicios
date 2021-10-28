@@ -1,25 +1,32 @@
 
-import React from "react"
-import NavBar from "./components/NavBar";
-import ItemList from "./components/ItemList";
-import ItemDetail from "./components/item-detail/ItemDetail";
-import ItemListContainer from "./layout/ItemListContainer";
-import ItemDetailContainer from "./layout/ItemDetailContainer";
+// npm i react-router-dom
 
+import React from "react"
+import NavBar from "./components/nav-bar/NavBar";
+import ItemListContainer from "./layout/item-list-container/ItemListContainer";
+import ItemDetailContainer from "./layout/item-detail-container/ItemDetailContainer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Title from "./components/title/Title";
 
 
 function App() {
   return (
-    <>
-    <NavBar />
-    <h1>Hola Mundo</h1>
-    {/* <ItemListContainer>
-      <ItemList/>
-    </ItemListContainer> */}
-    <ItemDetailContainer>
-      <ItemDetail/>
-    </ItemDetailContainer>
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Title />
+      <Switch>
+        <Route path="/" exact>
+          <ItemListContainer />
+        </Route>
+        <Route path="/item/:itemId" exact>
+          <ItemDetailContainer />
+        </Route>
+        <Route path="/category/:categoryId" exact>
+          <ItemListContainer />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+
   );
 }
 

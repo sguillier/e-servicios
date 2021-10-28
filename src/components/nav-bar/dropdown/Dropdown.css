@@ -1,0 +1,41 @@
+
+.dd-header:hover{
+    cursor: pointer;
+    color: lightpink;
+}
+
+.dd-wrapper{
+    align-items: center;
+}
+
+.dd-list {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.dd-list-item {
+    display: block;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;    
+    text-decoration: none;
+    color: var(--colorBD);
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+
+.dd-list-item:hover {
+    color: lightpink;
+}
+
+.dd-list-item-active {
+    background-color: lightpink;
+    cursor: default;
+}
+
+.dd-list-item-active:hover {
+    color: var(--colorBD);
+}
