@@ -3,13 +3,13 @@
 /* ITEM COUNT*/
 
 .item-count {
+  display: flex;
+  flex-flow: column;
   background-color: lightgray;
   border-radius: 5px;
   padding: 12px;
-  height: 140px;
   width: 200px;
-  margin: auto;
-  /* display: flex; */
+  /* margin: 20px auto; */
   justify-content: center;
 }
 

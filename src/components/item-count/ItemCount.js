@@ -2,23 +2,11 @@ import React, { useState } from 'react'
 import "./ItemCount.css";
 
 
-const ItemCount = ({ item }) => {
+const ItemCount = ({ addToCart, item }) => {
 
     const [count, setCount] = useState(item.min)
 
-    const contratarHoras = () => {
-        count === 0 ?
-            alert(`Debes Seleccionar Una minima Cantidad De Horas`) :
-            alert(`Contratar ${count} Horas de ${item.service} ofrecido por ${item.name}`)
-    }
 
-    const agrgarHorasCarrito = () => {
-        count === 0 ?
-            alert(`Debes Seleccionar Una minima Cantidad De Horas`) :
-            alert(`Agregar al Carrito ${count} Horas de ${item.service} ofrecido por ${item.name}`)
-    }
-
-    
     return (
         <div className="item-count">
             <div className="item-count-add">
@@ -32,15 +20,9 @@ const ItemCount = ({ item }) => {
                     onClick={() => { setCount(Math.min(count + 1, item.max)) }}
                 >+</button>
             </div>
-            <button
+            <button 
                 className="item-count-button"
-                onClick={contratarHoras}
-            >
-                Contratar Horas
-            </button>
-            <button
-                className="item-count-button"
-                onClick={agrgarHorasCarrito}
+                onClick={()=>addToCart(count)}
             >
                 Agregar al Carrito
             </button>
