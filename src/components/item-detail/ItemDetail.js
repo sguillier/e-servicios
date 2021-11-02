@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../item-count/ItemCount.js';
+import ItemPrice from '../item-price/ItemPrice.js';
 import ItemShedule from './item-shedule/ItemShedule.js';
 import './ItemDetail.css'
 
@@ -20,13 +21,13 @@ const ItemDetail = ({ item }) => {
                     <h3>{item.service}</h3>
                     <h3 className="item-detail-name">{item.name}</h3>
                     <br />
+                    <ItemPrice price={item.price} />
+                    <br />
                     <img
                         className="item-detail-img"
                         src={item.urlPhoto}
                         alt={item.name}
                     />
-                    <br />
-                    <p className="item-detail-price">{item.price} la hora</p>
                     <br />
                     {showCount ? (
                         <>

@@ -1,0 +1,12 @@
+.item-price{
+    width: 200px;
+    padding: 10px;
+    background-color: lightgray;
+    /* background-color: var(--colorBLLL); */
+    /* border: 3px solid lightgrey; */
+    
+    color: var(--colorR);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+}

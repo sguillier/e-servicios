@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { CartContext } from "../../context/CartContext";
 import "./ItemCount.css";
 
 
 const ItemCount = ({ addToCart, item }) => {
 
     const [count, setCount] = useState(item.min)
-
-
+    const { contextAddItem } = useContext(CartContext);
+    
     return (
         <div className="item-count">
             <div className="item-count-add">
@@ -22,7 +23,11 @@ const ItemCount = ({ addToCart, item }) => {
             </div>
             <button 
                 className="item-count-button"
-                onClick={()=>addToCart(count)}
+                // onClick={()=>contextAddItem(item, count)}
+                onClick={()=>{
+                    contextAddItem(item, count)
+                    addToCart(count)
+                }}
             >
                 Agregar al Carrito
             </button>

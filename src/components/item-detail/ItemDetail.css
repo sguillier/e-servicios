@@ -68,14 +68,10 @@
 
 .item-detail-img {
     width: 200px;
+    /* border: 3px solid lightgrey; */
+    border-radius: 8px;
 }
 
-.item-detail-price {
-    width: 200px;
-    padding: 10px;
-    background-color: lightgray;
-    border-radius: 5px;
-}
 
 .item-detail-button-exit {
     background-color: var(--colorBD);
