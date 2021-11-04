@@ -1,8 +1,9 @@
 
 import React from "react"
 import { Link } from "react-router-dom"
-import CartWidgets from "./CartWidgets"
+import CartWidgets from "./cart-widget/CartWidget"
 import Dropdown from "./dropdown/Dropdown"
+
 import "./NavBar.css"
 
 

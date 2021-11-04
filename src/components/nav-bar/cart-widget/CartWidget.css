@@ -1,0 +1,35 @@
+
+/* .cart-widget-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.cart-widget-total-container{
+    position: absolute;
+    margin-left: 4px;
+    margin-top: -6px;
+    width: 30px;
+    height: 20px;
+    /* z-index: -100; */
+}
+
+.cart-widget-total{
+    margin: auto;
+    color: var(--colorR);
+    font-weight: bold;
+}
+
+
+.cart {
+    display: block;
+    margin-top: 5px;
+    height: 30px;
+    fill: white;
+    /* opacity: 0; */
+  }
+  
+  /* .cart:hover {
+    fill: lightpink;
+    cursor: pointer;
+  } */

@@ -19,7 +19,7 @@ const ItemCard = ({ item }) => {
             </h4>
 
             <Link to={"/item/" + item.itemId} className="item-card-service">
-                <div className="item-car-img-container">
+                <div className="item-card-img-container">
                     <img
                         className="item-card-img"
                         src={item.urlPhoto}

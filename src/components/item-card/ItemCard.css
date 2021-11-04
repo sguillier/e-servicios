@@ -29,7 +29,7 @@
 }
 
 
-.item-car-img-container{
+.item-card-img-container{
   display: flex;
   width: 200px;
   height: 200px;
@@ -42,13 +42,13 @@
 }
 
 
-.item-car-img-container:hover {
+.item-card-img-container:hover {
   color: lightpink;
   cursor: pointer;
   background-color: lightpink;
 }
 
-/* .item-card-img:hover {
+.item-card-img:hover {
   color: lightpink;
   cursor: pointer;
-} */
+}

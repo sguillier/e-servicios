@@ -58,14 +58,3 @@
 }
 
 
-.cart {
-  display: block;
-  margin-top: 5px;
-  height: 30px;
-  fill: white;
-}
-
-.cart:hover {
-  fill: lightpink;
-  cursor: pointer;
-}

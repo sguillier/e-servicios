@@ -6,7 +6,7 @@ import "./ItemCount.css";
 const ItemCount = ({ addToCart, item }) => {
 
     const [count, setCount] = useState(item.min)
-    const { contextAddItem } = useContext(CartContext);
+    const cart = useContext(CartContext);
     
     return (
         <div className="item-count">
@@ -23,9 +23,8 @@ const ItemCount = ({ addToCart, item }) => {
             </div>
             <button 
                 className="item-count-button"
-                // onClick={()=>contextAddItem(item, count)}
                 onClick={()=>{
-                    contextAddItem(item, count)
+                    cart.addItem(item, count)
                     addToCart(count)
                 }}
             >

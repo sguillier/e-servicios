@@ -4,7 +4,7 @@ import './ItemPrice.css'
 const ItemPrice = ({price}) => {
     return (
         <div className="item-price">
-            {price}
+            ${price} USD
         </div>
     )
 }
