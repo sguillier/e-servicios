@@ -14,7 +14,7 @@ const categorys = [
     },
     {
         categoryId: 'dep',
-        name: 'Deporte y Acondicionamiento Físico',    
+        name: 'Deporte y Acondicionamiento Físico',
     },
 ];
 
@@ -22,7 +22,7 @@ const categorys = [
 const promiseCategorys = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(JSON.stringify(categorys))
-    }, 3000);
+    }, 1000);
 });
 
 

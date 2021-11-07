@@ -24,7 +24,8 @@
 }
 
 .item-cart-text {
-    text-align: left;    
+    text-align: left;
+    max-width: 300px;
 }
 
 .item-cart-name {

@@ -23,7 +23,7 @@ const ItemShedule = ({ shedule }) => {
             cell.push(<div className="shedule-clm-name" key={day+"name"}> {daysName[day]} </div>)
 
             hrs.forEach(hr => {
-                const state = (shedule[day].includes(hr))?"on":"off"
+                const state = (shedule[day]?.includes(hr))?"on":"off"
                 cell.push(<div className={"shedule-" + state} key={day + "-" + hr}> cell </div>)
             })
 

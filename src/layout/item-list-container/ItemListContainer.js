@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router';
-import promiseDataItems from '../../data/promiseDataItems.js'
 import promiseCategorys from '../../data/promiseCategorys.js'
 import ItemCard from "../../components/item-card/ItemCard";
+import { db } from "../../firebase/Init"
+import { collection, query, where, getDocs } from "firebase/firestore";
+
 
 
 const ItemListContainer = () => {
@@ -10,26 +12,29 @@ const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
     useEffect(() => {
-        promiseDataItems
-            .then((data) => {
-                const arrayItems = JSON.parse(data)
-                // console.log(arrayItems)
+        const ejecuta = async () => {
+            try {
                 if (categoryId) {
-                    setItems(arrayItems.filter(e => e.categoryId === categoryId))
+                    const querySnap = await getDocs(query(collection(db, "items"), where("categoryId", "==", categoryId)));
+                    const arrayItems = querySnap.docs.map(doc => ({ itemId: doc.id, ...doc.data() }))
+                    setItems(arrayItems)
                 } else {
+                    const querySnap = await getDocs(collection(db, "items"));
+                    const arrayItems = querySnap.docs.map(doc => ({ itemId: doc.id, ...doc.data() }))
                     setItems(arrayItems)
                 }
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+            } catch (error) {
+                console.log('error: ', error)
+            }
+        }
+        ejecuta()
+
     }, [categoryId])
 
 
     const [categoryName, setCategoryName] = useState(null)
     useEffect(() => {
         if (categoryId) {
-            // console.log(categoryId)
             promiseCategorys
                 .then((data) => {
                     const arrayCategorys = JSON.parse(data)
@@ -39,8 +44,6 @@ const ItemListContainer = () => {
                 .catch((err) => {
                     console.log(err)
                 })
-        }else{
-            setCategoryName(null)
         }
     }, [categoryId])
 

@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router';
-import promiseDataItems from '../../data/promiseDataItems.js'
 import ItemDetail from '../../components/item-detail/ItemDetail'
+import { db } from "../../firebase/Init"
+import { doc, getDoc } from "firebase/firestore";
+
+
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
-    const {itemId} = useParams()
-    
+    const { itemId } = useParams()
+
     useEffect(() => {
-        promiseDataItems
-            .then((data) => {
-                // console.log(data)
-                const arrayItems = JSON.parse(data)
-                setItem(arrayItems.find(e => e.itemId === parseInt(itemId)))
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        const ejecuta = async () => {
+            try {
+                const docSnap = await getDoc(doc(db, "items", itemId));
+                setItem({ itemId: itemId, ...docSnap.data() })
+            } catch (error) {
+                console.log('error: ', error)
+            }
+        }
+        ejecuta()
     }, [itemId])
 
-    
+
     return (
-        <ItemDetail item={item}/>
+        <>
+            {item ?
+                <ItemDetail item={item} />
+                : null
+            }
+        </>
     )
 }
 
