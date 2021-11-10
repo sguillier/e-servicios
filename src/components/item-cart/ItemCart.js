@@ -14,7 +14,7 @@ const ItemCart = ({ itemId, cart }) => {
         }
     }
 
-
+    
     return (
         <div className="item-cart">
 
