@@ -1,10 +1,17 @@
+.dd-container {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: var(--altoNavbar);
+}
 
-.dd-header:hover{
+
+.dd-header:hover {
     cursor: pointer;
     color: lightpink;
 }
 
-.dd-wrapper{
+.dd-wrapper {
     align-items: center;
 }
 
@@ -19,7 +26,7 @@
     display: block;
     font-size: 15px;
     padding-left: 5px;
-    padding-right: 5px;    
+    padding-right: 5px;
     text-decoration: none;
     color: var(--colorBD);
     border: 1px solid #ccc;

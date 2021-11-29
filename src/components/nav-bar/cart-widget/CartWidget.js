@@ -8,14 +8,15 @@ import { Link } from 'react-router-dom';
 const CartWidget = () => {
     const cart = useContext(CartContext);
 
-    return (
+
+    const printCart = (
         <Link to="/cart">
             <div className="cart-widget-container">
                 <div className="cart-widget-total-container">
                     <div className="cart-widget-total">
                         {(cart.totalQuantity < 10) ?
                             cart.totalQuantity :
-                            '9+'
+                            '+9'
                         }
                     </div>
                 </div>
@@ -25,6 +26,9 @@ const CartWidget = () => {
             </div>
         </Link>
     )
+
+    return cart.totalQuantity ? printCart : null
+
 }
 
 export default CartWidget

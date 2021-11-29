@@ -72,7 +72,16 @@ body {
 
 
 
+/* Span Link */
+.span-link{
+  font-weight: bold;
+  color: var(--colorR)
+}
 
+.span-link:hover{
+  color: lightpink;
+  cursor: pointer;
+}
 
 
 

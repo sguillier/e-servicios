@@ -1,26 +1,14 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom'
-import promiseCategorys from '../../../data/promiseCategorys.js'
-import './Dropdown.css'
+import { categorys } from '../../../data/Categorys.js';
+import './DropDown.css'
 
-const Dropdown = () => {
+const DropDown = () => {
     const [active, setActive] = useState(false);
-
-    const [categorys, setCategorys] = useState([])
-    useEffect(() => {
-        promiseCategorys
-            .then((data) => {
-                setCategorys(JSON.parse(data))
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [])
 
 
     return (
-        <div>
+        <div className="dd-container">
             <div
                 className="dd-wrapper"
                 onMouseOver={() => setActive(true)}
@@ -33,8 +21,7 @@ const Dropdown = () => {
                     <div className={"dd-list "}>
                         {categorys.map(category => (
                             <NavLink to={"/category/" + category.categoryId}
-                                activeClassName="dd-list-item-active"
-                                className="dd-list-item"
+                                className={({ isActive }) => "dd-list-item" + (isActive ? " dd-list-item-active" : "")}
                                 key={category.categoryId}
                                 onClick={() => setActive(false)}
                             >
@@ -47,4 +34,4 @@ const Dropdown = () => {
     )
 }
 
-export default Dropdown
+export default DropDown

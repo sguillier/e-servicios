@@ -1,51 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router';
-import promiseCategorys from '../../data/promiseCategorys.js'
 import ItemCard from "../../components/item-card/ItemCard";
-import { db } from "../../firebase/Init"
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { fireGetItemsByCategoryId } from "../../firebase/firebase"
+import { getNameByCategoryId } from '../../data/Categorys.js';
+
 
 
 
 const ItemListContainer = () => {
     const { categoryId } = useParams()
-
     const [items, setItems] = useState([])
+    const [categoryName, setCategoryName] = useState(null)
+
     useEffect(() => {
         const ejecuta = async () => {
-            try {
-                if (categoryId) {
-                    const querySnap = await getDocs(query(collection(db, "items"), where("categoryId", "==", categoryId)));
-                    const arrayItems = querySnap.docs.map(doc => ({ itemId: doc.id, ...doc.data() }))
-                    setItems(arrayItems)
-                } else {
-                    const querySnap = await getDocs(collection(db, "items"));
-                    const arrayItems = querySnap.docs.map(doc => ({ itemId: doc.id, ...doc.data() }))
-                    setItems(arrayItems)
-                }
-            } catch (error) {
-                console.log('error: ', error)
-            }
+            setItems(await fireGetItemsByCategoryId(categoryId))
+            setCategoryName( getNameByCategoryId(categoryId) )
         }
         ejecuta()
-
     }, [categoryId])
 
 
-    const [categoryName, setCategoryName] = useState(null)
-    useEffect(() => {
-        if (categoryId) {
-            promiseCategorys
-                .then((data) => {
-                    const arrayCategorys = JSON.parse(data)
-                    const objetCategory = arrayCategorys.find(e => e.categoryId === categoryId)
-                    setCategoryName(objetCategory.name)
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        }
-    }, [categoryId])
 
 
     return (

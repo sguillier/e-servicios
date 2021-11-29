@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import ItemCount from '../item-count/ItemCount.js';
+import ItemCount from './item-count/ItemCount.js';
 import ItemPrice from '../item-price/ItemPrice.js';
 import ItemShedule from './item-shedule/ItemShedule.js';
 import './ItemDetail.css'
 
 
-
 const ItemDetail = ({ item }) => {
-    const [showCount, setShowCount] = useState(true)
-    const addToCart = (count) => {
-        setShowCount(false)
-    }
-
+    
     if (item) {
 
         return (
@@ -29,17 +22,7 @@ const ItemDetail = ({ item }) => {
                         alt={item.name}
                     />
                     <br />
-                    {showCount ? (
-                        <>
-                            <ItemCount addToCart={addToCart} item={item} />
-                            <br />
-                        </>
-                    ) : null}
-                    <Link to="/cart">
-                        <button className="item-detail-button-exit">
-                            Terminar la compra
-                        </button>
-                    </Link>
+                    <ItemCount item={item} />
                 </div>
                 <div className="item-detail-grid-b">
                     <h3>Descripción</h3>

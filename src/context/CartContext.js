@@ -9,36 +9,39 @@ export const CartProvider = ({ children }) => {
     const [totalQuantity, setTotalQuantity] = useState(0);
 
 
-    const isInCart = (itemId) => {
-        return items.find(e => e.itemId === itemId) ? true : false;
+    const getQuantityByItemId = (itemId) => {
+        const item = items.find(e => e.itemId === itemId)
+        if( item ){
+            return item.quantity
+        }else{
+            return false;
+        }
     };
 
     const addItem = (item, quantity) => {
-        if (!isInCart(item.itemId)) {
+        if (!getQuantityByItemId(item.itemId)) {
             setItems([...items, { ...item, quantity }])
             setTotalQuantity(totalQuantity + quantity)
             setTotal(total + quantity * item.price)
         }
     };
 
-    const setQuantityItem = (itemId, add) => {
-        if (isInCart(itemId)) {
+    const addQuantityByItemId = (itemId, add) => {
+        if (getQuantityByItemId(itemId)) {
             const array = items
             for (let i = 0; i < items.length; i++) {
                 if (array[i].itemId === itemId) {
                     array[i].quantity += add
-                    // console.log(array[i].quantity)
                     setTotalQuantity(totalQuantity + add)
                     setTotal(total + add*array[i].price)
-                    // break
                 }
             }
             setItems(array);
         }
     };
 
-    const removeItem = (itemId) => {
-        if (isInCart(itemId)) {
+    const removeByItemId = (itemId) => {
+        if (getQuantityByItemId(itemId)) {
             const itemOut = items.find(e => e.itemId === itemId)
             setTotalQuantity(totalQuantity - itemOut.quantity)
             setTotal(total - itemOut.quantity * itemOut.price)
@@ -60,10 +63,10 @@ export const CartProvider = ({ children }) => {
                 items,
                 total,
                 totalQuantity,
-                isInCart,
-                removeItem,
+                getQuantityByItemId,
+                removeByItemId,
                 addItem,
-                setQuantityItem,
+                addQuantityByItemId,
                 clearItems
             }}
         >

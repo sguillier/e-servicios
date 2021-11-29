@@ -1,18 +1,13 @@
-
-import React from "react"
-import {CartProvider} from "./context/CartContext";
-import Routes from "./routes/Routes";
-// import Prueba from "./data/Prueba";
+import { CartProvider } from "./context/CartContext";
+import NavRoutes from "./routes/NavRoutes";
 
 
 function App() {
 
-
   return (
-    <CartProvider>
-      <Routes />
-    </CartProvider>
-    // <Prueba />
+      <CartProvider>
+        <NavRoutes />
+      </CartProvider>
   );
 }
 

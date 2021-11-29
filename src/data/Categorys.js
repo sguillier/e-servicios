@@ -1,4 +1,5 @@
 
+
 const categorys = [
     {
         categoryId: 'clp',
@@ -19,11 +20,16 @@ const categorys = [
 ];
 
 
-const promiseCategorys = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(JSON.stringify(categorys))
-    }, 1000);
-});
+function getNameByCategoryId(categoryId) {
+    if (!categoryId) {
+        return null
+    }
+    const category = categorys.find(e => e.categoryId === categoryId)
+    if (category) {
+        return category.name
+    } else {
+        return null
+    }
+}
 
-
-export default promiseCategorys
+export {categorys, getNameByCategoryId }

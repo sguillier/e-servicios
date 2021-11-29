@@ -4,13 +4,12 @@ import './ItemCart.css'
 
 const ItemCart = ({ itemId, cart }) => {
     const item = cart.items.find(e => e.itemId === itemId)
-
     const [quantity, setQuantity] = useState(item.quantity)
 
     const setItem = (add) => {
         if( item.min <= quantity + add && quantity + add <= item.max ){
             setQuantity(quantity + add)
-            cart.setQuantityItem(item.itemId, add)
+            cart.addQuantityByItemId(item.itemId, add)
         }
     }
 
@@ -55,7 +54,7 @@ const ItemCart = ({ itemId, cart }) => {
             </div>
 
             <div className="item-cart-button-remove-container">
-                <button className="item-cart-button-remove" onClick={() => cart.removeItem(item.itemId)} >
+                <button className="item-cart-button-remove" onClick={() => cart.removeByItemId(item.itemId)} >
                     X
                 </button>
             </div>

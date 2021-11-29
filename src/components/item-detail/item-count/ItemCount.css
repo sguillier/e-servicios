@@ -1,0 +1,133 @@
+
+/* ...................................................... */
+/*   Local   */
+
+.item-count {
+  display: flex;
+  flex-flow: column;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 12px;
+  width: 200px;
+  /* margin: 20px auto; */
+  justify-content: center;
+}
+
+.item-count-add {
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  height: 32px;
+  margin: 5px auto;
+  padding: 5px;
+  width: 160px;
+}
+
+.item-count-add-button {
+  background-color: var(--colorBD);
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  font-weight: bold;
+}
+
+.item-count-add-button:hover {
+  background-color: lightpink;
+  cursor: pointer;
+}
+
+.item-count-button {
+  background-color: var(--colorBD);
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  margin: 5px auto;
+  padding: 4px;
+  height: 26px;
+  width: 160px;
+}
+
+.item-count-button:hover {
+  background-color: lightpink;
+  cursor: pointer;
+}
+
+
+
+
+/* ...................................................... */
+/*   inCart   */
+
+.item-count-in-cart {
+  display: flex;
+  flex-flow: column;
+  border: 3px solid lightgray;
+  border-radius: 8px;
+  padding: 12px;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+
+.item-count-in-cart-hours{
+  border: 3px solid var(--colorR);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px auto;
+  width: 100px;
+  font-weight: bold;
+}
+
+
+.item-count-in-cart-add {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px auto;
+  width: 160px;
+}
+
+.item-count-in-cart-add-button {
+  background-color: var(--colorBD);
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  font-weight: bold;
+}
+
+.item-count-in-cart-add-button:hover {
+  background-color: lightpink;
+  cursor: pointer;
+}
+
+.item-count-in-cart-button-delete {
+  border: 3px solid var(--colorR);
+  font-weight: bold;
+  color: var(--colorR);
+  border-radius: 5px;
+  
+  display: inline-block;
+  margin: 5px auto;
+  padding: 4px;
+  height: 26px;
+  width: 160px;
+}
+
+.item-count-in-cart-button-delete:hover {
+  background-color: var(--colorR);
+  color: white;
+  cursor: pointer;
+
+  /* background-color: lightpink;
+  cursor: pointer; */
+}

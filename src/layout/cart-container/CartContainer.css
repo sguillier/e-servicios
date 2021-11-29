@@ -24,6 +24,32 @@
     cursor: pointer;
 }
 
-.cart-container-total{
+.cart-container-total {
     color: grey;
 }
+
+
+.cart-container-send-button {
+    border: none;
+    background-color: var(--colorBD);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cart-container-send-button:hover{
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+
+/* .cart-container-span-link{
+    font-weight: bold;
+    color: var(--colorR)
+}
+
+.cart-container-span-link:hover{
+    color: lightpink;
+    cursor: pointer;
+} */
