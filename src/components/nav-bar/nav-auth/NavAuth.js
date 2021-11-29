@@ -47,6 +47,7 @@ const NavAuth = () => {
                 <div
                     className="nav-auth-login"
                     onClick={() => navigate('/auth', { state: { nextRoute: '/' } })}
+                    // onClick={() => navigate('/auth')}
                 >
                     Ingresar
                 </div>

@@ -8,11 +8,9 @@ const AuthContainer = () => {
     const [ sign, setSign ] =  useState('In')
     const location = useLocation()
     const nextRoute = location.state.nextRoute
-
-    // console.log('location: ', nextRoute)
-
+    
     return (
-        <div>
+        <div>    
             {(sign==='In')?
                 <SignIn setSign={setSign} nextRoute={nextRoute} />:
                 <SignUp setSign={setSign} nextRoute={nextRoute} />

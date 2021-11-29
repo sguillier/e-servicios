@@ -2,11 +2,13 @@ import { fireSignIn } from "../../firebase/firebase"
 
 
 import './Auth.css'
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 const SignIn = ({ setSign, nextRoute }) => {
+
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 

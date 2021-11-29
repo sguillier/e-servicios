@@ -2,6 +2,11 @@
 
 El proyecto consiste en un mercado de servicios ofrecido por un grupo de famosos. De esta manera se busca de una manera simpatica aplicar las funcionalidades de React.
 Como se indica más arriba, este desarrollo es parte del proyecto final del curso de React ofrecido por CoderHouse.
+Para visualizar el proyecto en modo producción visitar la siguiente url (para hacer inicio de sesión solo es necesario un correo (puede ser ficticio) y una contraseña).
+
+https://e-servicios.web.app/
+
+
 
 ## Sobre la Implementación
 
@@ -12,6 +17,7 @@ Como se indica más arriba, este desarrollo es parte del proyecto final del curs
 3. Para el consumo de imagenes se utiliza firebase storage.
 4. Para el consumo de datos se utiliza firestore
 5. Para la gestión de autentificación se utiliza firebase auth
+6. Para el deploy se utilizó firebase hosting (https://e-servicios.web.app/).
 
 
 ## Sobre la Funcionalidad
