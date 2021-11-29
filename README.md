@@ -12,8 +12,9 @@ https://e-servicios.web.app/
 
 1. La intalacion de React fue hecha con `npm create-react-app`
 2. Las librerias extras agregadas son:
-    * "react-router-dom": "^6.0.2"
-    * "firebase": "^9.3.0"    
+    * "react-router-dom": "^6.0.2"  (última versión de react-router-dom (no la por defecto), muy útil para redirección condicional de url)
+    * "firebase": "^9.3.0"
+    * firebase-tools de forma global
 3. Para el consumo de imagenes se utiliza firebase storage.
 4. Para el consumo de datos se utiliza firestore
 5. Para la gestión de autentificación se utiliza firebase auth
@@ -33,5 +34,5 @@ Algunas notas sobre la funcionalidad de la pagina
 
 ## Sobre la Seguridad de la Información
 
-Se definieron en firestorm reglas de seguridad que permiten la lectura pública de los datos asociados a los servicios ofrecidos pero se bloquea la escritura y/o edición de estos. Respecto de las órdenes de compra enviadas, éstas sólo pueden ser editadas y leídas por el usuario que las generó, por ello es requisito estar logueado para poder generarlas.
+Se definieron en firestore reglas de seguridad que permiten la lectura pública de los datos asociados a los servicios ofrecidos pero se bloquea la escritura y/o edición de estos. Respecto de las órdenes de compra enviadas, éstas sólo pueden ser editadas y leídas por el usuario que las generó, por ello es requisito estar logueado para poder generarlas.
 
